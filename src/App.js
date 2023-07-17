@@ -6,6 +6,7 @@ import Contact from './components/Contact'
 import Error404 from './components/Error404'
 
 import { Link ,Route, Routes } from 'react-router-dom';
+import Movies from './components/Movie';
 
 /*
   README.
@@ -24,9 +25,10 @@ function App() {
           <Link to={'/contact'} >Contact</Link>
         </nav>
         <Routes>
-          <Route path="/" element={< HomePage/> }/>
+          <Route path="/" element={ <HomePage/> }/>
           <Route path="/about" element={ <About/> }/>
           <Route path="/contact" element={ <Contact/> }/>
+          <Route path="/movies/:id" element={ <Movies/> }/>
           <Route path='*' element={ <Error404/> } />
         </Routes>
     </div>
